@@ -91,6 +91,7 @@ h1, h2, h3 {
   border: 1px solid #ffa7a7;
   background-color: #ffa7a73b;
   border-radius: 6px;
+  display: none;
 }
 
 .error-field p {
