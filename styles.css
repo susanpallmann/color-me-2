@@ -1,3 +1,29 @@
 body {
   font: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.small-caption {
+  font: 700 12px/12px "Nunito Sans", sans-serif;
+}
+
+.form-text {
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 8px;
+  border: 1px solid;
+  padding: 5px 10px;
+}
+
+.form-button {
+  font: 600 14px/18px "Nunito Sans", sans-serif;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+#copyright {
+  font-weight: 500;
 }
