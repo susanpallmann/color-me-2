@@ -13,21 +13,29 @@
     
     <link rel="stylesheet" type="text/css" href="styles.css">
     
-    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth-compat.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    
     <script>
-      const firebaseApp = firebase.initializeApp({
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
         apiKey: "AIzaSyBHQvOVS6pdyjfzbwferY6aUMNxN_8d6gA",
         authDomain: "color-me-2.firebaseapp.com",
         projectId: "color-me-2",
         storageBucket: "color-me-2.appspot.com",
         messagingSenderId: "69968373261",
         appId: "1:69968373261:web:da0a379998fe4895835744"
-      });
-      const db = firebaseApp.firestore();
-      const auth = firebaseApp.auth();
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
     </script>
+    
     <script src="app.js"></script>
   </head>
   <body>
