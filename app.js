@@ -39,14 +39,16 @@ $('document').ready(function() {
     });
     
     $('#view-log-in').click(function(event){
-        event.preventDefault();
-        
+        event.preventDefault();   
+        $('#log-in-form').hide();
+        $('#sign-up-form').fadeIn();
         return false;
     });
                             
     $('#view-sign-up').click(function(event){
         event.preventDefault();
-        
+        $('#sign-up-form').hide();
+        $('#log-in-form').fadeIn();
         return false;
     }
 });
