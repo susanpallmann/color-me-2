@@ -95,6 +95,7 @@ h1, h2, h3 {
 
 .error-field p {
   margin: 0;
+  font-size: 14px;
   color: #950000;
 }
 
