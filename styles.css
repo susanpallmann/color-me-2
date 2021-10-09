@@ -121,6 +121,8 @@ h1, h2, h3 {
 #post-day {
   position: absolute;
   z-index: 3;
+  width: 100%;
+  text-align: center;
 }
 
 #authenticate {
