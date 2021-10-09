@@ -106,3 +106,7 @@ h1, h2, h3 {
 #sign-up-form {
   display: none;
 }
+
+#profile-actions {
+  display: none;
+}
