@@ -37,7 +37,21 @@ $('document').ready(function() {
         });
         return false;
     });
+    
+    $('#view-log-in').click(function(event){
+        event.preventDefault();
+        
+        return false;
+    });
+                            
+    $('#view-sign-up').click(function(event){
+        event.preventDefault();
+        
+        return false;
+    }
 });
+
+
 
 /*
 // Sign Out
