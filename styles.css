@@ -175,7 +175,7 @@ h1, h2, h3 {
   opacity: 1;
 }
 
-.slider:-webkit-slider-thumb {
+.slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -188,7 +188,7 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
-.slider:-moz-range-thumb {
+.slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
   border-radius: 14px;
