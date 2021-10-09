@@ -10,6 +10,7 @@ $('document').ready(function() {
             .then((userCredential) => {
                 // Signed in 
                 var user = userCredential.user;
+                $('#sign-out').fadeIn();
                 console.log(user);
                 // ...
             })
@@ -30,6 +31,7 @@ $('document').ready(function() {
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
+                $('#sign-out').fadeIn();
                 console.log(user);
                 // ...
             })
@@ -62,6 +64,7 @@ $('document').ready(function() {
         firebase.auth().signOut()
             .then(() => {
                 // Sign-out successful.
+                $('#sign-out').fadeOut();
             }).catch((error) => {
                 // An error happened.
         });
