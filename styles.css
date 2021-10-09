@@ -91,6 +91,8 @@ h1, h2, h3 {
   border: 1px solid #ffa7a7;
   background-color: #ffa7a73b;
   border-radius: 6px;
+  padding: 1px 16px;
+  margin-bottom: 16px;
   display: none;
 }
 
@@ -99,10 +101,4 @@ h1, h2, h3 {
   font-size: 14px;
   color: #950000;
   text-align: left;
-}
-
-.error-field {
-  display: inline-block;
-  padding: 1px 16px;
-  margin-bottom: 16px;
 }
