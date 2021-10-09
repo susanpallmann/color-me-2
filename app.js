@@ -15,6 +15,7 @@ $("#sign-up-form").submit(function(event){
             // ..
     });
     event.preventDefault();
+    return false;
 });
 
 /*// Sign In
