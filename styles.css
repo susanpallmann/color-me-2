@@ -46,6 +46,7 @@ header {
   flex-flow: row;
   justify-content: space-between;
   padding: 8px 16px;
+  z-index: 7;
 }
 
 header h2 {
@@ -114,6 +115,12 @@ h1, h2, h3 {
 #app {
   padding: 26px;
   display: none;
+  position: relative;
+}
+
+#post-day {
+  position: absolute;
+  z-index: 3;
 }
 
 #authenticate {
