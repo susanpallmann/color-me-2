@@ -97,6 +97,7 @@ h1, h2, h3 {
   margin: 0;
   font-size: 14px;
   color: #950000;
+  text-align: left;
 }
 
 .error-field {
