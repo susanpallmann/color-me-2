@@ -25,6 +25,12 @@ body {
   outline: none;    
   background-color: #2080e5;
   color: #fff;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.form-button:hover, .form-button:focus, .form-button:active {
+  background-color: #166dc7;
 }
 
 #copyright {
@@ -86,10 +92,12 @@ h1, h2, h3 {
   background-color: #ffa7a73b;
   border-radius: 6px;
 }
+
 .error-field p {
   margin: 0;
   color: #950000;
 }
+
 .error-field {
   display: inline-block;
   padding: 1px 16px;
