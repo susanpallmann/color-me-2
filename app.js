@@ -56,16 +56,15 @@ $('document').ready(function() {
         $('#sign-up-form').fadeIn();
         return false;
     });
+    
+    $('#sign-out').click(function(event){
+        event.preventDefault();
+        firebase.auth().signOut()
+            .then(() => {
+                // Sign-out successful.
+            }).catch((error) => {
+                // An error happened.
+        });
+        return false;
+    });
 });
-
-
-
-/*
-// Sign Out
-firebase.auth().signOut()
-    .then(() => {
-        // Sign-out successful.
-    }).catch((error) => {
-        // An error happened.
-});
-*/
