@@ -13,6 +13,7 @@ $('document').ready(function() {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 $('#authenticate').find('.error-field p').text(errorMessage);
+                $('#authenticate').find('.error-field').fadeIn();
                 // ..
         });
         return false;
@@ -31,6 +32,7 @@ $('document').ready(function() {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 $('#authenticate').find('.error-field p').text(errorMessage);
+                $('#authenticate').find('.error-field').fadeIn();
                 // ..
         });
         return false;
