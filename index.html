@@ -43,28 +43,30 @@
     </header>
     <main>
       <div id="authenticate">
-        <form id="sign-up-form">
-          <input id="sign-up-username" class="form-text" name="sign-up-username" placeholder="username" type="text">
+        <div class="rectangle-container">
+          <form id="sign-up-form">
+            <input id="sign-up-username" class="form-text" name="sign-up-username" placeholder="username" type="text">
+            <br>
+            <br>
+            <input id="sign-up-password" class="form-text" name="sign-up-password" placeholder="password" type="password">
+            <br>
+            <br>
+            <input id="sign-up-submit" class="form-button" name="sign-up-submit" value="sign up" type="submit">
+          </form>
+          <span class="small-caption">Already have an account? <a href="">Log in</a>.</span>
           <br>
           <br>
-          <input id="sign-up-password" class="form-text" name="sign-up-password" placeholder="password" type="password">
-          <br>
-          <br>
-          <input id="sign-up-submit" class="form-button" name="sign-up-submit" value="sign up" type="submit">
-        </form>
-        <span class="small-caption">Already have an account? <a href="">Log in</a>.</span>
-        <br>
-        <br>
-        <form id="log-in-form">
-          <input id="log-in-username" class="form-text" name="log-in-username" placeholder="username" type="text">
-          <br>
-          <br>
-          <input id="log-in-password" class="form-text" name="log-in-password" placeholder="password" type="password">
-          <br>
-          <br>
-          <input id="log-in-submit" class="form-button" name="log-in-submit" value="log in" type="submit">
-        </form>
-        <span class="small-caption">Don't have an account? <a href="">Sign up</a>.</span>
+          <form id="log-in-form">
+            <input id="log-in-username" class="form-text" name="log-in-username" placeholder="username" type="text">
+            <br>
+            <br>
+            <input id="log-in-password" class="form-text" name="log-in-password" placeholder="password" type="password">
+            <br>
+            <br>
+            <input id="log-in-submit" class="form-button" name="log-in-submit" value="log in" type="submit">
+          </form>
+          <span class="small-caption">Don't have an account? <a href="">Sign up</a>.</span>
+        </div>
       </div>
       <div id="app"></div>
     </main>
