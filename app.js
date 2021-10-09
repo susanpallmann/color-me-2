@@ -1,3 +1,6 @@
+function authenticateSuccessful(user) {
+}
+
 $('document').ready(function() {
     $("#sign-up-form").submit(function(event){
         event.preventDefault();
@@ -7,6 +10,7 @@ $('document').ready(function() {
             .then((userCredential) => {
                 // Signed in 
                 var user = userCredential.user;
+                console.log(user);
                 // ...
             })
             .catch((error) => {
@@ -26,6 +30,7 @@ $('document').ready(function() {
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
+                console.log(user);
                 // ...
             })
             .catch((error) => {
