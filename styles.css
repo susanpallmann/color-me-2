@@ -110,3 +110,18 @@ h1, h2, h3 {
 #profile-actions {
   display: none;
 }
+
+#app {
+  border: 1px solid #D0D7DE;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 36px;
+}
+
+.cube {
+  background-color: #EBEDF0;
+  border: 1px solid: #DEE0E4;
+  border-radius: 3px;
+  height: 11px;
+  width: 11px;
+}
