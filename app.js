@@ -37,7 +37,7 @@ $('document').ready(function() {
     });
 });
 
-
+/*
 // Sign Out
 firebase.auth().signOut()
     .then(() => {
