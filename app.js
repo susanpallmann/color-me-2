@@ -1,7 +1,7 @@
 
 $("#sign-up-form").submit(function(event){
     event.preventDefault();
-    let email = $('#sign-up-email').val();
+    /*let email = $('#sign-up-email').val();
     let password = $('#sign-up-password').val();
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
@@ -14,7 +14,7 @@ $("#sign-up-form").submit(function(event){
             var errorMessage = error.message;
             $('#authenticate').find('.error-field p').text(errorMessage);
             // ..
-    });
+    });*/
     return false;
 });
 
