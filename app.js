@@ -17,9 +17,6 @@ $('document').ready(function() {
         });
         return false;
     });
-});
-
-$('document').ready(function() {
     $("#log-in-form").submit(function(event){
         event.preventDefault();
         let email = $('#log-in-email').val();
