@@ -22,6 +22,9 @@
     <script src="app.js"></script>  
   </head>
   <body>
+    <header>
+      <h2>Color Me</h2>
+    </header>
     <main>
       <div id="authenticate">
         <form id="sign-up-form">
@@ -33,6 +36,7 @@
           <br>
           <input id="sign-up-submit" class="form-button" name="sign-up-submit" value="sign up" type="submit">
         </form>
+        <span class="small-caption">Already have an account? <a href="">Log in</a>.</span>
         <form id="log-in-form">
           <input id="log-in-username" class="form-text" name="log-in-username" placeholder="username" type="text">
           <br>
@@ -42,10 +46,12 @@
           <br>
           <input id="log-in-submit" class="form-button" name="log-in-submit" value="log in" type="submit">
         </form>
+        <span class="small-caption">Don't have an account? <a href="">Sign up</a>.</span>
       </div>
       <div id="app"></div>
     </main>
     <footer>
+      <span class="small-caption" id="copyright">© 2021 Susan Pallmann All Rights Reserved | <a href="">Privacy</a></span>
     </footer>
   </body>
 </html>
