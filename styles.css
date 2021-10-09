@@ -48,10 +48,12 @@ header h2 {
 
 a {
   text-decoration: none;
+  color: #2080e5;
 }
 
 a:hover, a:active, a:focus {
   text-decoration: underline;
+  color: #166dc7;
 }
 
 #authenticate {
