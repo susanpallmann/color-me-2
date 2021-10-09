@@ -10,7 +10,8 @@ $('document').ready(function() {
             .then((userCredential) => {
                 // Signed in 
                 var user = userCredential.user;
-                $('#sign-out').fadeIn();
+                $('#profile-actions').fadeIn();
+                $('main').addClass('authenticated');
                 console.log(user);
                 // ...
             })
@@ -31,7 +32,8 @@ $('document').ready(function() {
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
-                $('#sign-out').fadeIn();
+                $('#profile-actions').fadeIn();
+                $('main').addClass('authenticated');
                 console.log(user);
                 // ...
             })
@@ -64,7 +66,8 @@ $('document').ready(function() {
         firebase.auth().signOut()
             .then(() => {
                 // Sign-out successful.
-                $('#sign-out').fadeOut();
+                $('#profile-actions').fadeOut();
+                $('main').removeClass('authenticated');
             }).catch((error) => {
                 // An error happened.
         });
