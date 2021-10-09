@@ -8,6 +8,7 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
+    $('#authenticate').find('.error-field p').text(errorMessage);
     // ..
   });
 
