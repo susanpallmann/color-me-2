@@ -1,5 +1,3 @@
-
-
 $('document').ready(function() {
     
     // Tracker to handle whether or not a user is currently logged in, updates UI accordingly
@@ -86,5 +84,10 @@ $('document').ready(function() {
                 // An error happened.
         });
         return false;
+    });
+    
+    $('#post-day-hue').on('input', function() {
+        let hue = $(this).val();
+        $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`);
     });
 });
