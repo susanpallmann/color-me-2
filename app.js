@@ -1,3 +1,5 @@
+
+
 $('document').ready(function() {
     
     // Tracker to handle whether or not a user is currently logged in, updates UI accordingly
