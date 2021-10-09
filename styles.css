@@ -112,6 +112,10 @@ h1, h2, h3 {
 }
 
 #app {
+  padding: 26px;
+}
+
+#cube-container {
   border: 1px solid #D0D7DE;
   border-radius: 6px;
   padding: 12px;
@@ -119,9 +123,6 @@ h1, h2, h3 {
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
-}
-
-#cube-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
