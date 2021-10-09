@@ -51,3 +51,17 @@ a {
 a:hover, a:active, a:focus {
   text-decoration: underline;
 }
+
+#authenticate {
+  text-align: center;
+  margin: 36px;
+}
+
+.rectangle-container {
+  border: 1px solid #D0D7DE;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 12px 36px;
+  box-shadow: 0px 0px 10px 0px #D0D7DE7D;
+  background-color: #F4FAFF;
+}
