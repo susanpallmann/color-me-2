@@ -50,7 +50,7 @@ $('document').ready(function() {
         $('#sign-up-form').hide();
         $('#log-in-form').fadeIn();
         return false;
-    }
+    });
 });
 
 
