@@ -158,3 +158,43 @@ h1, h2, h3 {
 #post-day-hue {
   width: 100%;
 }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 4px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider:-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 14px;
+  background: #D0D7DE;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 10px 0px #D0D7DE7D;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider:-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 14px;
+  background: #D0D7DE;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 10px 0px #D0D7DE7D;
+  outline: none;
+  cursor: pointer;
+}
