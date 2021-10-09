@@ -102,3 +102,7 @@ h1, h2, h3 {
   color: #950000;
   text-align: left;
 }
+
+#sign-up-form {
+  display: none;
+}
