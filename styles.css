@@ -113,6 +113,11 @@ h1, h2, h3 {
 
 #app {
   padding: 26px;
+  display: none;
+}
+
+#authenticate {
+  display: none;
 }
 
 #cube-container {
