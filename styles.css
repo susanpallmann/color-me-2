@@ -178,8 +178,8 @@ h1, h2, h3 {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 14px;
   background: #D0D7DE;
   border: 2px solid #fff;
@@ -189,8 +189,8 @@ h1, h2, h3 {
 }
 
 .slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 14px;
   background: #D0D7DE;
   border: 2px solid #fff;
