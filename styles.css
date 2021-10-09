@@ -121,6 +121,12 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 
+#cube-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .cube {
   background-color: #EBEDF0;
   border: 1px solid #DEE0E4;
