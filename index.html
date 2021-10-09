@@ -91,11 +91,21 @@
         <div id="post-day">
           <div class="rectangle-container">
             <form id="post-day-form" method="">
+              <label for="post-day-mood">How are you feeling?</label>
+              <select id="post-day-mood" name="post-day-mood">
+                <option value="1">Terrible</option>
+                <option value="2">Bad</option>
+                <option value="3">So-so</option>
+                <option value="4">Good</option>
+                <option value="5">Wonderful</option>
+              </select>
+              <br>
+              <br>
               <label for="post-day-hue">What color was today?</label>
               <input type="range" min="1" max="100" value="50" class="slider" id="post-day-hue" name="post-day-hue">
               <br>
               <br>
-              <textarea id="post-day-notes" name="post-day-notes" rows="4" cols="50" placeholder="Anything noteworthy about today?"></textarea>
+              <textarea id="post-day-notes" name="post-day-notes" rows="4" cols="50" placeholder="Anything to note about today?"></textarea>
               <br>
               <br>
               <input id="post-day-submit" class="form-button" name="post-day-submit" value="submit">
