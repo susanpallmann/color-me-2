@@ -1,8 +1,6 @@
-function authenticateSuccessful(user) {
-}
-
 $('document').ready(function() {
     
+    // Tracker to handle whether or not a user is currently logged in, updates UI accordingly
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
             // User is signed in, see docs for a list of available properties
@@ -19,6 +17,7 @@ $('document').ready(function() {
         }
     });
     
+    // Sign Up
     $("#sign-up-form").submit(function(event){
         event.preventDefault();
         let email = $('#sign-up-email').val();
@@ -38,6 +37,8 @@ $('document').ready(function() {
         });
         return false;
     });
+    
+    // Log In
     $("#log-in-form").submit(function(event){
         event.preventDefault();
         let email = $('#log-in-email').val();
@@ -58,6 +59,7 @@ $('document').ready(function() {
         return false;
     });
     
+    //Switching Forms
     $('#view-log-in').click(function(event){
         event.preventDefault();   
         $('#sign-up-form').hide();
@@ -72,6 +74,7 @@ $('document').ready(function() {
         return false;
     });
     
+    // Sign Out
     $('#sign-out').click(function(event){
         event.preventDefault();
         firebase.auth().signOut()
