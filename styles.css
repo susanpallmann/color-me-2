@@ -13,7 +13,7 @@ body {
   border-radius: 6px;
   border: 1px solid #D0D7DE;
   padding: 5px 10px;
-  max-width: 250px;
+  max-width: 300px;
   width: 100%;
 }
 
@@ -147,4 +147,12 @@ h1, h2, h3 {
   height: 11px;
   width: 11px;
   margin: 2px;
+}
+
+#post-day-form {
+  text-align: center;
+}
+
+#post-day-hue {
+  width: 100%;
 }
