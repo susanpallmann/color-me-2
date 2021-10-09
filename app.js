@@ -8,13 +8,13 @@ $('document').ready(function() {
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/firebase.User
             var uid = user.uid;
-            $('#authenticate').fadeOut();
+            $('#authenticate').hide();
             $('#app').fadeIn();
             $('#profile-actions').fadeIn();
         } else {
             // User is signed out
-            $('#profile-actions').fadeOut();
-            $('#app').fadeOut();
+            $('#profile-actions').hide();
+            $('#app').hide();
             $('#authenticate').fadeIn();
         }
     });
