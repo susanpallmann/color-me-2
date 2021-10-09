@@ -1,5 +1,6 @@
 
 $("#sign-up-form").submit(function(event){
+    event.preventDefault();
     let email = $('#sign-up-email').val();
     let password = $('#sign-up-password').val();
     firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -14,7 +15,6 @@ $("#sign-up-form").submit(function(event){
             $('#authenticate').find('.error-field p').text(errorMessage);
             // ..
     });
-    event.preventDefault();
     return false;
 });
 
