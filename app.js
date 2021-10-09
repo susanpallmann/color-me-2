@@ -2,6 +2,23 @@ function authenticateSuccessful(user) {
 }
 
 $('document').ready(function() {
+    
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            var uid = user.uid;
+            $('#authenticate').fadeOut();
+            $('#app').fadeIn();
+            $('#profile-actions').fadeIn();
+        } else {
+            // User is signed out
+            $('#profile-actions').fadeOut();
+            $('#app').fadeOut();
+            $('#authenticate').fadeIn();
+        }
+    });
+    
     $("#sign-up-form").submit(function(event){
         event.preventDefault();
         let email = $('#sign-up-email').val();
@@ -10,9 +27,6 @@ $('document').ready(function() {
             .then((userCredential) => {
                 // Signed in 
                 var user = userCredential.user;
-                $('#profile-actions').fadeIn();
-                $('main').addClass('authenticated');
-                console.log(user);
                 // ...
             })
             .catch((error) => {
@@ -32,9 +46,6 @@ $('document').ready(function() {
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
-                $('#profile-actions').fadeIn();
-                $('main').addClass('authenticated');
-                console.log(user);
                 // ...
             })
             .catch((error) => {
@@ -66,8 +77,6 @@ $('document').ready(function() {
         firebase.auth().signOut()
             .then(() => {
                 // Sign-out successful.
-                $('#profile-actions').fadeOut();
-                $('main').removeClass('authenticated');
             }).catch((error) => {
                 // An error happened.
         });
