@@ -89,6 +89,12 @@ $('document').ready(function() {
     $('#post-day-hue').on('input', function() {
         let hue = $(this).val();
         $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`);
-        console.log(hue);
+        if (hue > 30 && hue < 231) {
+            $('.rectangle-container').removeClass('dark');
+            $('.rectangle-container').addClass('light');
+        } else {
+            $('.rectangle-container').removeClass('light');
+            $('.rectangle-container').addClass('dark');
+        }
     });
 });
