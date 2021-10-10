@@ -169,6 +169,7 @@ h1, h2, h3 {
   -webkit-transition: .2s;
   transition: opacity .2s;
   border-radius: 4px;
+  margin: 12px 0;
 }
 
 .slider::-webkit-slider-thumb {
