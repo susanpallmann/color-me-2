@@ -25,6 +25,7 @@ body {
   outline: none;    
   background-color: #2080e5;
   color: #fff;
+  -webkit-transition: .15s;
   transition: all 0.15s;
   cursor: pointer;
 }
@@ -165,14 +166,9 @@ h1, h2, h3 {
   height: 7px;
   background: #ffffff;
   outline: none;
-  opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
   border-radius: 4px;
-}
-
-.slider:hover {
-  opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
@@ -229,11 +225,12 @@ h1, h2, h3 {
   width: 12px;
   background-color: #eee;
   border-radius: 50%;
+  -webkit-transition: .1s;
   transition: 0.1s all;
 }
 
 .radio-container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .radio-container input:checked ~ .checkmark {
@@ -256,5 +253,5 @@ h1, h2, h3 {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: white;
+  background: #ffffff;
 }
