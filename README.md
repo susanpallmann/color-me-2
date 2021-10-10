@@ -9,3 +9,4 @@ A new take on an old project - experimental UX project around a daily mood journ
 - [ ] Resurface entered days to the board.
 - [ ] Make some sort of CTA for entering a new day.
 - [ ] Hide the CTA if today was already filled out.
+- [ ] Document.
