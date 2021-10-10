@@ -3,4 +3,4 @@ A new take on an old project - experimental UX project around a daily mood journ
 
 ## To-Do
 
-- [ ]Test
+- [ ] Test
