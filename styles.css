@@ -211,6 +211,8 @@ h1, h2, h3 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: inline-block;
+  margin: 9px;
 }
 
 .radio-container input {
@@ -227,6 +229,7 @@ h1, h2, h3 {
   width: 12px;
   background-color: #eee;
   border-radius: 50%;
+  transition: 0.1s all;
 }
 
 .radio-container:hover input ~ .checkmark {
@@ -248,10 +251,10 @@ h1, h2, h3 {
 }
 
 .radio-container .checkmark:after {
- 	top: 4px;
-	left: 4px;
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: white;
+  top: 4px;
+  left: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
 }
