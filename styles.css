@@ -257,3 +257,79 @@ h1, h2, h3 {
   border-radius: 50%;
   background: #ffffff;
 }
+
+.rectangle-container.dark label {
+  color: #ffffff;
+}
+
+.rectangle-container.dark a {
+  color: #ffffff;
+}
+
+.rectangle-container.dark a:hover, 
+.rectangle-container.dark a:focus, 
+.rectangle-container.dark a:active {
+  color: #ffffff;
+}
+
+.rectangle-container.dark .form-button {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.rectangle-container.dark .form-button:hover,
+.rectangle-container.dark .form-button:focus,
+.rectangle-container.dark .form-button:active {
+  background-color: #ededed;
+  color: #000000;
+}
+
+.rectangle-container.light label {
+  color: #000000;
+}
+
+.rectangle-container.light a {
+  color: #000000;
+}
+
+.rectangle-container.light a:hover, 
+.rectangle-container.light a:focus, 
+.rectangle-container.light a:active {
+  color: #000000;
+}
+
+.rectangle-container.light .form-button {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.rectangle-container.light .form-button:hover,
+.rectangle-container.light .form-button:focus,
+.rectangle-container.light .form-button:active {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.rectangle-container.light .form-text {
+  border: 1px solid #000000;
+}
+
+.rectangle-container.light .slider {
+  background: #515151;
+}
+
+.rectangle-container.light .slider::-webkit-slider-thumb {
+  background: #515151;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 10px 0px #D0D7DE7D;
+}
+
+.rectangle-container.light .slider::-moz-range-thumb {
+  background: #515151;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 10px 0px #D0D7DE7D;
+}
+
+.rectangle-container.light .checkmark {
+  background-color: #515151;
+}
