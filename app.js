@@ -89,5 +89,6 @@ $('document').ready(function() {
     $('#post-day-hue').on('input', function() {
         let hue = $(this).val();
         $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`);
+        console.log(hue);
     });
 });
