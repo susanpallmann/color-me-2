@@ -337,3 +337,11 @@ h1, h2, h3 {
 .rectangle-container.light .checkmark {
   background-color: #515151;
 }
+
+.rectangle-container.light .radio-container input:checked ~ .checkmark {
+    background-color: #ffffff;
+}
+
+.rectangle-container.light .radio-container .checkmark::after {
+  background: #000000;
+}
