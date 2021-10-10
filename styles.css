@@ -4,6 +4,14 @@ body {
   margin: 0;
 }
 
+#title img {
+  height: 30px;
+  width: 30px;
+}
+#title {
+  display: flex;
+}
+
 .small-caption {
   font: 700 12px/12px "Nunito Sans", sans-serif;
 }
