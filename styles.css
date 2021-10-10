@@ -235,7 +235,7 @@ h1, h2, h3 {
 }
 
 .radio-container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #2080e5;
 }
 
 .checkmark:after {
