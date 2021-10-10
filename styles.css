@@ -284,6 +284,10 @@ h1, h2, h3 {
   color: #000000;
 }
 
+.rectangle-container.dark .radio-container input:checked ~ .checkmark {
+    background-color: #000000;
+}
+
 .rectangle-container.light label {
   color: #000000;
 }
