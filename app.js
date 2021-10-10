@@ -1,3 +1,21 @@
+function logDay(day, data) {
+    // First checks authentication to prevent the user from writing to any directory other than
+    // the one associated with their user ID.
+    var user = firebase.auth().currentUser;
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            let uid = user.uid;
+            
+            // Update info at specific path
+            var path = firebase.database().ref('users/' + uid + '/ log/' + day);
+            path.update(data);
+        } else {
+            // No user is signed in.
+        }
+    });
+}
+
 $('document').ready(function() {
     
     // Tracker to handle whether or not a user is currently logged in, updates UI accordingly
