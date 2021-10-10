@@ -3,4 +3,9 @@ A new take on an old project - experimental UX project around a daily mood journ
 
 ## To-Do
 
-- [ ] Test
+- [ ] Style radio field.
+- [ ] Make color background change if UI is white or black themed.
+- [ ] Make form submission send to database.
+- [ ] Resurface entered days to the board.
+- [ ] Make some sort of CTA for entering a new day.
+- [ ] Hide the CTA if today was already filled out.
