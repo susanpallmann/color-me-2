@@ -3,6 +3,7 @@ A new take on an old project - experimental UX project around a daily mood journ
 
 ## To-Do
 
+- [ ] Make color background a default value.
 - [ ] Style radio field.
 - [ ] Make color background change if UI is white or black themed.
 - [ ] Make form submission send to database.
