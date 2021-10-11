@@ -115,4 +115,10 @@ $('document').ready(function() {
             $('.rectangle-container').addClass('dark');
         }
     });
+    
+    $("#post-day-form").submit(function(event){
+        event.preventDefault();
+        
+        return false;
+    });
 });
