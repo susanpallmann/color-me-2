@@ -118,7 +118,17 @@ $('document').ready(function() {
     
     $("#post-day-form").submit(function(event){
         event.preventDefault();
-        
+        let mood = $('input[name="post-day-mood"]:checked').val();
+        let hue = $('#post-day-hue').val();
+        let notes = $('#post-day-notes').val();
+        let data = {
+            mood: mood,
+            hue: hue,
+            notes, notes
+        };
+        console.log(data);
+        let date = new Date();
+        console.log(date);
         return false;
     });
 });
