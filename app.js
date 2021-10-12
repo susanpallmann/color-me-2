@@ -301,6 +301,7 @@ $('document').ready(function() {
             $('#edit-day').show();
         }
         loadDays();
+        $('#post-day').fadeOut();
         return false;
     });
 
