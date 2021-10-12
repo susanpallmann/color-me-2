@@ -1,9 +1,21 @@
+function formatDate(date) {
+    let dd = String(date.getDate()). padStart(2, '0');
+    let mm = String(date.getMonth() + 1). padStart(2, '0'); //January is 0!
+    let yyyy = today.getFullYear();
+    let formattedDate = yyyy + mm + dd;
+    return date;
+}
+
+function adjustDate(num) {
+    var today = new Date();
+    today.setDate(today.getDate() - num);
+    let date = formatDate(today)
+    return date;
+}
+
 function getToday() {
     let today = new Date();
-    let dd = String(today.getDate()). padStart(2, '0');
-    let mm = String(today.getMonth() + 1). padStart(2, '0'); //January is 0!
-    let yyyy = today.getFullYear();
-    let date = yyyy + mm + dd;
+    let date = formatDate(today);
     return date;
 }
 
@@ -136,6 +148,10 @@ $('document').ready(function() {
             notes, notes
         };
         let date = getToday();
+        console.log(getToday());
+        console.log(adjustDate(1));
+        console.log(adjustDate(2));
+        console.log(adjustDate(3));
         logDay(date, data);
         return false;
     });
