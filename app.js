@@ -73,12 +73,10 @@ function loadDays() {
 
             // Takes snapshot
             location.on('value', function(snapshot) {
-                if (snapshot.exists()) {
-                    $('#cube-container').empty();
-                    for (let i = 0; i < daysLoaded; i++) {
-                        let date = adjustDate(i);
-                        loadDayCube(uid, date);
-                    }
+                $('#cube-container').empty();
+                for (let i = 0; i < daysLoaded; i++) {
+                    let date = adjustDate(i);
+                    loadDayCube(uid, date);
                 }
             });
         }
