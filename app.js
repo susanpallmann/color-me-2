@@ -193,10 +193,10 @@ $('document').ready(function() {
         return false;
     });
     
-    loadDays();
-});
+    $(".cube").click(function(event) {
+        let date = $(this).attr('date');
+        console.log(date);
+    });
 
-$(".cube").click(function(event) {
-    let date = $(this).attr('date');
-    console.log(date);
+    loadDays();
 });
