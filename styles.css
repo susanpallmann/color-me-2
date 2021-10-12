@@ -417,6 +417,7 @@ h1, h2, h3 {
   column-gap: 8px;
   -webkit-transition: 0.2s;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 #log-day:hover, #edit-day:hover,
