@@ -72,6 +72,7 @@ function loadDayCube(date) {
 function loadDays() {
     // Adjustable variable to determine how many days are loaded to the grid
     let daysLoaded = 90;
+    $('#cube-container').empty();
     for (let i = 0; i < daysLoaded; i++) {
         let date = adjustDate(i);
         loadDayCube(date);
