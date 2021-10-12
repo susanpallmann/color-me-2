@@ -239,7 +239,7 @@ h1, h2, h3 {
   opacity: 1;
 }
 
-.radio-container:hover input ~ .checkmark {
+.radio-container:hover input:not([disabled]) ~ .checkmark {
   background-color: #ffffff;
   opacity: 0.8;
 }
