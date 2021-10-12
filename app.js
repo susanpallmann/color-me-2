@@ -271,19 +271,19 @@ $('document').ready(function() {
         $('#post-day-edit').hide();
     });
     
-    $('#log-day').click(function(event) {
+    $('#app').on('click', '#log-day', function() {
         let date = getToday();
         loadDayForm(date, true);
         $('#post-day').show();
     });
     
-    $('#edit-day').click(function(event) {
+    $('#app').on('click', '#edit-day', function() {
         let date = getToday();
         loadDayForm(date, true);
         $('#post-day').show();
     });
     
-    $('#close-post').click(function(event) {
+    $('#app').on('click', '#close-post', function() {
         $('#post-day').hide();
     });
 });
