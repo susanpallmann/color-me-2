@@ -108,11 +108,13 @@ function loadDayForm(date, editable) {
                         $('#post-day-hue').prop('disabled', false);
                         $('#post-day-notes').prop('disabled', false);
                         $('#post-day-submit').show();
+                        $('#post-day-edit').hide();
                     } else {
                         $('input[name="post-day-mood"]').prop('disabled', true);
                         $('#post-day-hue').prop('disabled', true);
                         $('#post-day-notes').prop('disabled', true);
                         $('#post-day-submit').hide();
+                        $('#post-day-edit').show();
                     }
                 } else {
                     // No data found
@@ -251,5 +253,13 @@ $('document').ready(function() {
     $('#cube-container').on('click', '.cube' , function() {
         let date = $(this).attr('date');
         loadDayForm(date, false);
+    });
+    
+    $('#post-day-edit').click(function(event) {
+        $('input[name="post-day-mood"]').prop('disabled', false);
+        $('#post-day-hue').prop('disabled', false);
+        $('#post-day-notes').prop('disabled', false);
+        $('#post-day-submit').show();
+        $('#post-day-edit').hide();
     });
 });
