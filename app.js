@@ -58,9 +58,9 @@ function loadDayCube(date) {
                     let mood = data.mood;
                     mood = mood/5;
                     let hue = data.hue;
-                    $('#cube-container').prepend(cube.clone().css('background-color', `hsl(${hue}, 70%, 70%)`).css('opacity', `${mood}`).attribute('date', date));
+                    $('#cube-container').prepend(cube.clone().css('background-color', `hsl(${hue}, 70%, 70%)`).css('opacity', `${mood}`).attr('date', date));
                 } else {
-                    $('#cube-container').prepend(cube.clone().attribute('date', date));
+                    $('#cube-container').prepend(cube.clone().attr('date', date));
                 }
             });
         } else {
@@ -74,7 +74,6 @@ function loadDays() {
     let daysLoaded = 90;
     for (let i = 0; i < daysLoaded; i++) {
         let date = adjustDate(i);
-        console.log(date);
         loadDayCube(date);
     }
 }
