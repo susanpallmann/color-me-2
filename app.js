@@ -103,6 +103,13 @@ function loadDayForm(date, editable) {
                     $('#post-day-hue').val(hue);
                     $('#post-day-notes').val(notes);
                     $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`).attr("date", date);
+                    if (hue > 30 && hue < 231) {
+                        $('.rectangle-container').removeClass('dark');
+                        $('.rectangle-container').addClass('light');
+                    } else {
+                        $('.rectangle-container').removeClass('light');
+                        $('.rectangle-container').addClass('dark');
+                    }
                     if (editable === true) {
                         $('input[name="post-day-mood"]').prop('disabled', false);
                         $('#post-day-hue').prop('disabled', false);
