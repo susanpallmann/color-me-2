@@ -197,6 +197,30 @@ $('document').ready(function() {
     
     $('#cube-container').on('click', '.cube' , function() {
         let date = $(this).attr('date');
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+
+                // User is signed in.
+                let uid = user.uid;
+
+                // Grabs directory location
+                let location = firebase.database().ref('users/' + uid + '/log/' + date);
+
+                // Takes snapshot
+                location.once('value', function(snapshot) {
+                    if (snapshot.exists()) {
+                        let data = snapshot.val();
+                        let mood = data.mood;
+                        let hue = data.hue;
+                        let notes = data.notes;
+                    } else {
+                        // No data found
+                    }
+                });
+            } else {
+                // No user is signed in.
+            }
+        });
         console.log(date);
     });
 });
