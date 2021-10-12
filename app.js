@@ -52,7 +52,7 @@ function loadDayCube(date) {
             let location = firebase.database().ref('users/' + uid + '/log/' + date);
 
             // Takes snapshot
-            location.once('value', function(snapshot) {
+            location.on('value', function(snapshot) {
                 if (snapshot.exists()) {
                     let data = snapshot.val();
                     let mood = data.mood;
@@ -143,6 +143,7 @@ $('document').ready(function() {
             $('#authenticate').hide();
             $('#app').fadeIn();
             $('#profile-actions').fadeIn();
+            loadDays();
             
             let date = getToday();
             // Grabs directory location
@@ -265,11 +266,10 @@ $('document').ready(function() {
             date = dateAttr;
             logDay(date, data);
         }
+        loadDays();
         return false;
     });
 
-    loadDays();
-    
     $('#cube-container').on('click', '.cube' , function() {
         let date = $(this).attr('date');
         loadDayForm(date, false);
