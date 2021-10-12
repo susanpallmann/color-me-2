@@ -127,7 +127,7 @@ h1, h2, h3 {
   position: relative;
 }
 
-#post-day {
+#post-day, #resurface-day {
   position: absolute;
   z-index: 3;
   width: 100%;
