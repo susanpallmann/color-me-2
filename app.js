@@ -289,10 +289,10 @@ $('document').ready(function() {
         };
         let dateAttr = $('#post-day').attr("date");
         if (typeof dateAttr !== 'undefined' && dateAttr !== false) {
-            date = getToday();
+            date = dateAttr;
             logDay(date, data);
         } else {
-            date = dateAttr;
+            date = getToday();
             logDay(date, data);
         }
         let today = getToday();
