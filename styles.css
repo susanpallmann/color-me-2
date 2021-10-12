@@ -367,8 +367,7 @@ h1, h2, h3 {
   text-align: left;
   font-size: 12;
 }
-
-#post-day-edit .material-icons-round.smaller-icons {
+.form-button .material-icons-round.smaller-icons {
   margin-top: 8px;
   position: absolute;
   left: 6;
