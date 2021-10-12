@@ -98,7 +98,7 @@ $('document').ready(function() {
     });
     
     // Sign Up
-    $("#sign-up-form").submit(function(event){
+    $("#sign-up-form").submit(function(event) {
         event.preventDefault();
         let email = $('#sign-up-email').val();
         let password = $('#sign-up-password').val();
@@ -119,7 +119,7 @@ $('document').ready(function() {
     });
     
     // Log In
-    $("#log-in-form").submit(function(event){
+    $("#log-in-form").submit(function(event) {
         event.preventDefault();
         let email = $('#log-in-email').val();
         let password = $('#log-in-password').val();
@@ -140,14 +140,14 @@ $('document').ready(function() {
     });
     
     //Switching Forms
-    $('#view-log-in').click(function(event){
+    $('#view-log-in').click(function(event) {
         event.preventDefault();   
         $('#sign-up-form').hide();
         $('#log-in-form').fadeIn();
         return false;
     });
                             
-    $('#view-sign-up').click(function(event){
+    $('#view-sign-up').click(function(event) {
         event.preventDefault();
         $('#log-in-form').hide();
         $('#sign-up-form').fadeIn();
@@ -155,7 +155,7 @@ $('document').ready(function() {
     });
     
     // Sign Out
-    $('#sign-out').click(function(event){
+    $('#sign-out').click(function(event) {
         event.preventDefault();
         firebase.auth().signOut()
             .then(() => {
@@ -194,4 +194,9 @@ $('document').ready(function() {
     });
     
     loadDays();
+});
+
+$(".cube").click(function(event) {
+    let date = $(this).attr('date');
+    console.log(date);
 });
