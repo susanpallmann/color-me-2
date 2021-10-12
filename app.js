@@ -148,13 +148,6 @@ $('document').ready(function() {
             notes, notes
         };
         let date = getToday();
-        console.log(getToday());
-        console.log(adjustDate(1));
-        console.log(adjustDate(2));
-        console.log(adjustDate(3));
-        console.log(adjustDate(10));
-        console.log(adjustDate(11));
-        console.log(adjustDate(12));
         logDay(date, data);
         return false;
     });
