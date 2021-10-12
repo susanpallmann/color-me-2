@@ -359,6 +359,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+  align-items: center;
 }
 
 #post-date {
