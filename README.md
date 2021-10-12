@@ -9,9 +9,9 @@ A new take on an old project - experimental UX project around a daily mood journ
 - [X] Make form submission send to database.
 - [X] Resurface entered days to the board.
   - [X] Make a reusable function for navigating the calendar/our date system (YYYYMMDD). 
-- [ ] Make resurfacing day window.
-- [ ] Install Google Material Icons.
-- [ ] Add dates to log/edit/view days.
+- [X] Make resurfacing day window - ended up reusing initial form instead.
+- [X] Install Google Material Icons.
+- [ ] Add dates to log/edit/view days - half complete.
 - [ ] Make some sort of CTA for entering a new day.
 - [ ] Hide (or change) the CTA if today was already filled out.
 - [ ] Make form show/hide functionality.
