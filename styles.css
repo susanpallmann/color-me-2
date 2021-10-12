@@ -267,7 +267,7 @@ h1, h2, h3 {
   background: #ffffff;
 }
 
-.rectangle-container.dark label {
+.rectangle-container.dark label, .rectangle-container.dark p, .rectangle-container.dark span {
   color: #ffffff;
 }
 
@@ -297,7 +297,7 @@ h1, h2, h3 {
     background-color: #000000;
 }
 
-.rectangle-container.light label {
+.rectangle-container.light label, .rectangle-container.light p, .rectangle-container.light span {
   color: #000000;
 }
 
@@ -353,4 +353,16 @@ h1, h2, h3 {
 
 .rectangle-container.light .radio-container .checkmark::after {
   background: #ffffff;
+}
+
+#post-day-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#post-date {
+  font-weight: 700;
+  text-align: left;
+  font-size: 12;
+  margin-bottom: 24px;
 }
