@@ -7,7 +7,7 @@ function formatDate(date) {
 }
 
 function adjustDate(num) {
-    var today = new Date();
+    let today = new Date();
     today.setDate(today.getDate() - num);
     let date = formatDate(today);
     return date;
@@ -22,7 +22,7 @@ function getToday() {
 function logDay(day, data) {
     // First checks authentication to prevent the user from writing to any directory other than
     // the one associated with their user ID.
-    var user = firebase.auth().currentUser;
+    let user = firebase.auth().currentUser;
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
@@ -39,7 +39,9 @@ function logDay(day, data) {
 
 function loadDayCube(date) {
     
-    var user = firebase.auth().currentUser;
+    let cube = $('div.cube');
+    
+    let user = firebase.auth().currentUser;
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             
@@ -53,9 +55,9 @@ function loadDayCube(date) {
             location.once('value', function(snapshot) {
                 let data = snapshot.val();
                 let mood = data.mood;
+                mood = mood/5;
                 let hue = data.hue;
-                let notes = data.notes;
-                console.log(mood);
+                $('#cube-container').prepend(cube.clone()).css('background-color', `hsl(${hue}, 70%, 70%)`).css('opacity', `${mood}`);
             });
         } else {
             // No user is signed in.
@@ -184,7 +186,8 @@ $('document').ready(function() {
         };
         let date = getToday();
         logDay(date, data);
-        loadDayCube(date);
         return false;
     });
+    
+    loadDays();
 });
