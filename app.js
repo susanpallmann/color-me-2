@@ -257,7 +257,7 @@ $('document').ready(function() {
         }
     });
     
-    $("#post-day-form").submit(function(event){
+    $("#post-day-form").submit(function(event) {
         event.preventDefault();
         let date;
         let mood = $('input[name="post-day-mood"]:checked').val();
@@ -275,6 +275,11 @@ $('document').ready(function() {
         } else {
             date = dateAttr;
             logDay(date, data);
+        }
+        let today = getToday();
+        if (dateAttr === today) {
+            $('#log-day').hide();
+            $('#edit-day').show();
         }
         loadDays();
         return false;
@@ -296,7 +301,6 @@ $('document').ready(function() {
     
     $('#app').on('click', '#log-day', function() {
         let date = getToday();
-        console.log(date);
         loadDayForm(date, true);
         $('#post-day').fadeIn();
     });
