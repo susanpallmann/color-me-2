@@ -138,12 +138,25 @@ $('document').ready(function() {
     // Tracker to handle whether or not a user is currently logged in, updates UI accordingly
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-            // User is signed in, see docs for a list of available properties
-            // https://firebase.google.com/docs/reference/js/firebase.User
+            // User is signed in
             var uid = user.uid;
             $('#authenticate').hide();
             $('#app').fadeIn();
             $('#profile-actions').fadeIn();
+            
+            let date = getToday();
+            // Grabs directory location
+            let location = firebase.database().ref('users/' + uid + '/log/' + date);
+
+            // Takes snapshot
+            location.once('value', function(snapshot) {
+                if (snapshot.exists()) {
+                    $('#edit-day').fadeIn();
+                } else {
+                    $('#log-day').fadeIn();
+                }
+            });
+            
         } else {
             // User is signed out
             $('#profile-actions').hide();
