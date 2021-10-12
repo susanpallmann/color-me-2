@@ -126,6 +126,9 @@ function loadDayForm(date, editable) {
                     }
                 } else {
                     // No data found
+                    let formattedDate = date;
+                    formattedDate = formattedDate.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
+                    $('#post-date').text(formattedDate);
                 }
             });
         } else {
@@ -287,6 +290,7 @@ $('document').ready(function() {
     
     $('#app').on('click', '#log-day', function() {
         let date = getToday();
+        console.log(date);
         loadDayForm(date, true);
         $('#post-day').fadeIn();
     });
