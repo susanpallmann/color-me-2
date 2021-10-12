@@ -11,8 +11,8 @@ A new take on an old project - experimental UX project around a daily mood journ
   - [X] Make a reusable function for navigating the calendar/our date system (YYYYMMDD). 
 - [X] Make resurfacing day window - ended up reusing initial form instead.
 - [X] Install Google Material Icons.
-- [ ] Add dates to log/edit/view days - half complete.
-- [ ] Make some sort of CTA for entering a new day.
-- [ ] Hide (or change) the CTA if today was already filled out.
-- [ ] Make form show/hide functionality.
+- [X] Add dates to log/edit/view days.
+- [X] Make some sort of CTA for entering a new day.
+- [X] Hide (or change) the CTA if today was already filled out.
+- [X] Make form show/hide functionality.
 - [ ] Comment code/document.
