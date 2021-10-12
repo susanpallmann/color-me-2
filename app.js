@@ -194,9 +194,9 @@ $('document').ready(function() {
     });
 
     loadDays();
-});
-
-$('document').on('click', '.cube' , function() {
-     let date = $(this).attr('date');
-     console.log(date);
+    
+    $('#cube=container').on('click', '.cube' , function() {
+        let date = $(this).attr('date');
+        console.log(date);
+    });
 });
