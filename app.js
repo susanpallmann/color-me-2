@@ -192,11 +192,11 @@ $('document').ready(function() {
         logDay(date, data);
         return false;
     });
-    
-    $(".cube").click(function(event) {
-        let date = $(this).attr('date');
-        console.log(date);
-    });
 
     loadDays();
+});
+
+$('document').on('click', '.cube' , function() {
+     let date = $(this).attr('date');
+     console.log(date);
 });
