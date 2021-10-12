@@ -219,7 +219,7 @@ $('document').ready(function() {
                         $('input[name="post-day-mood"]').prop('checked', false);
                         $(`#mood-${mood}`).prop('checked', true);
                         $('#post-day-hue').val(hue);
-                        $('#post-day-notes').html(notes);
+                        $('#post-day-notes').val(notes);
                         $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`);
                     } else {
                         // No data found
