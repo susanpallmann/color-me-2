@@ -53,11 +53,15 @@ function loadDayCube(date) {
 
             // Takes snapshot
             location.once('value', function(snapshot) {
-                let data = snapshot.val();
-                let mood = data.mood;
-                mood = mood/5;
-                let hue = data.hue;
-                $('#cube-container').prepend(cube.clone()).css('background-color', `hsl(${hue}, 70%, 70%)`).css('opacity', `${mood}`);
+                if (snapshot) {
+                    let data = snapshot.val();
+                    let mood = data.mood;
+                    mood = mood/5;
+                    let hue = data.hue;
+                    $('#cube-container').prepend(cube.clone()).css('background-color', `hsl(${hue}, 70%, 70%)`).css('opacity', `${mood}`).attribute('date', date);
+                } else {
+                    $('#cube-container').prepend(cube.clone()).attribute('date', date);;
+                }
             });
         } else {
             // No user is signed in.
