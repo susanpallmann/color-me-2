@@ -220,6 +220,7 @@ $('document').ready(function() {
                         $(`#mood-${mood}`).prop('checked', true);
                         $('#post-day-hue').val(hue);
                         $('#post-day-notes').html(notes);
+                        $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`);
                     } else {
                         // No data found
                     }
