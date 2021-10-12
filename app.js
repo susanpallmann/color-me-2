@@ -141,10 +141,16 @@ function loadDayForm(date, editable) {
                     $('#post-day-notes').val('');
                     $('#post-day .rectangle-container').css('background-color', `hsl(210, 70%, 70%)`).addClass('dark');
                     let today = getToday();
-                    if (date === today) {
+                    if (editable === true) {
+                        $('input[name="post-day-mood"]').prop('disabled', false);
+                        $('#post-day-hue').prop('disabled', false);
+                        $('#post-day-notes').prop('disabled', false);
                         $('#post-day-submit').show();
                         $('#post-day-edit').hide();
                     } else {
+                        $('input[name="post-day-mood"]').prop('disabled', true);
+                        $('#post-day-hue').prop('disabled', true);
+                        $('#post-day-notes').prop('disabled', true);
                         $('#post-day-submit').hide();
                         $('#post-day-edit').show();
                     }
