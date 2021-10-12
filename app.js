@@ -195,7 +195,7 @@ $('document').ready(function() {
 
     loadDays();
     
-    $('#cube=container').on('click', '.cube' , function() {
+    $('#cube-container').on('click', '.cube' , function() {
         let date = $(this).attr('date');
         console.log(date);
     });
