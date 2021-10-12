@@ -260,6 +260,7 @@ $('document').ready(function() {
     $('#cube-container').on('click', '.cube' , function() {
         let date = $(this).attr('date');
         loadDayForm(date, false);
+        $('#post-day').show();
     });
     
     $('#post-day-edit').click(function(event) {
@@ -268,5 +269,21 @@ $('document').ready(function() {
         $('#post-day-notes').prop('disabled', false);
         $('#post-day-submit').show();
         $('#post-day-edit').hide();
+    });
+    
+    $('#log-day').click(function(event) {
+        let date = getToday();
+        loadDayForm(date, true);
+        $('#post-day').show();
+    });
+    
+    $('#edit-day').click(function(event) {
+        let date = getToday();
+        loadDayForm(date, true);
+        $('#post-day').show();
+    });
+    
+    $('#close-post').click(function(event) {
+        $('#post-day').hide();
     });
 });
