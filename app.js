@@ -37,10 +37,30 @@ function logDay(day, data) {
     });
 }
 
-function loadDayCube(date) {
+function loadDayCube(uid, date) {
     
     let cube = $('<div class="cube"></div>');
     
+    // Grabs directory location
+    let location = firebase.database().ref('users/' + uid + '/log/' + date);
+
+    // Takes snapshot
+    location.once('value', function(snapshot) {
+        if (snapshot.exists()) {
+            let data = snapshot.val();
+            let mood = data.mood;
+            mood = mood/5;
+            let hue = data.hue;
+            $('#cube-container').prepend(cube.clone().css('background-color', `hsl(${hue}, 70%, 70%)`).css('opacity', `${mood}`).attr('date', date));
+        } else {
+            $('#cube-container').prepend(cube.clone().attr('date', date));
+        }
+    });
+}
+
+function loadDays() {
+    // Adjustable variable to determine how many days are loaded to the grid
+    let daysLoaded = 90;
     let user = firebase.auth().currentUser;
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
@@ -49,34 +69,20 @@ function loadDayCube(date) {
             let uid = user.uid;
             
             // Grabs directory location
-            let location = firebase.database().ref('users/' + uid + '/log/' + date);
+            let location = firebase.database().ref('users/' + uid + '/log');
 
             // Takes snapshot
             location.on('value', function(snapshot) {
                 if (snapshot.exists()) {
-                    let data = snapshot.val();
-                    let mood = data.mood;
-                    mood = mood/5;
-                    let hue = data.hue;
-                    $('#cube-container').prepend(cube.clone().css('background-color', `hsl(${hue}, 70%, 70%)`).css('opacity', `${mood}`).attr('date', date));
-                } else {
-                    $('#cube-container').prepend(cube.clone().attr('date', date));
+                    $('#cube-container').empty();
+                    for (let i = 0; i < daysLoaded; i++) {
+                        let date = adjustDate(i);
+                        loadDayCube(uid, date);
+                    }
                 }
             });
-        } else {
-            // No user is signed in.
         }
     });
-}
-
-function loadDays() {
-    // Adjustable variable to determine how many days are loaded to the grid
-    let daysLoaded = 90;
-    $('#cube-container').empty();
-    for (let i = 0; i < daysLoaded; i++) {
-        let date = adjustDate(i);
-        loadDayCube(date);
-    }
 }
 
 function loadDayForm(date, editable) {
