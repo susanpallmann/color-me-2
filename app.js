@@ -29,7 +29,7 @@ function logDay(day, data) {
             let uid = user.uid;
             
             // Update info at path
-            var path = firebase.database().ref('users/' + uid + '/ log/' + day);
+            var path = firebase.database().ref('users/' + uid + '/log/' + day);
             path.update(data);
         } else {
             // No user is signed in.
@@ -47,7 +47,7 @@ function loadDayCube(date) {
             let uid = user.uid;
             
             // Grabs directory location
-            let location = firebase.database().ref('users/' + uid + '/ log/' + date);
+            let location = firebase.database().ref('users/' + uid + '/log/' + date);
 
             // Takes snapshot
             location.once('value', function(snapshot) {
