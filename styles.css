@@ -384,3 +384,21 @@ h1, h2, h3 {
   padding-left: 24px;
   position: relative;
 }
+
+#date-container
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  align-items: center;
+}
+
+#close-post {
+  cursor: pointer;
+  opacity: 0.8;
+  -webkit-transition: 0.2;
+  transition: all 0.2s;
+}
+
+#close-post:hover, #close-post:active, #close-post:focus {
+  opacity: 1;
+}
