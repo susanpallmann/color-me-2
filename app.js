@@ -103,7 +103,7 @@ function loadDayForm(date, editable) {
                     $('#post-day-hue').val(hue);
                     $('#post-day-notes').val(notes);
                     $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`).attr("date", date);
-                    if (editable = true) {
+                    if (editable === true) {
                         $('input[name="post-day-mood"]').prop('disabled', false);
                         $('#post-day-hue').prop('disabled', false);
                         $('#post-day-notes').prop('disabled', false);
