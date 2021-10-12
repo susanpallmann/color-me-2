@@ -78,6 +78,52 @@ function loadDays() {
     }
 }
 
+function loadDayForm(date, editable) {
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+
+            // User is signed in.
+            let uid = user.uid;
+
+            // Grabs directory location
+            let location = firebase.database().ref('users/' + uid + '/log/' + date);
+
+            // Takes snapshot
+            location.once('value', function(snapshot) {
+                if (snapshot.exists()) {
+                    let data = snapshot.val();
+                    let mood = data.mood;
+                    let hue = data.hue;
+                    let notes = data.notes;
+                    let formattedDate = date;
+                    formattedDate = formattedDate.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
+                    $('#post-date').text(formattedDate);
+                    $('input[name="post-day-mood"]').prop('checked', false);
+                    $(`#mood-${mood}`).prop('checked', true);
+                    $('#post-day-hue').val(hue);
+                    $('#post-day-notes').val(notes);
+                    $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`).attr("date", date);
+                    if (editable = true) {
+                        $('input[name="post-day-mood"]').prop('disabled', false);
+                        $('#post-day-hue').prop('disabled', false);
+                        $('#post-day-notes').prop('disabled', false);
+                        $('#post-day-submit').show();
+                    } else {
+                        $('input[name="post-day-mood"]').prop('disabled', true);
+                        $('#post-day-hue').prop('disabled', true);
+                        $('#post-day-notes').prop('disabled', true);
+                        $('#post-day-submit').hide();
+                    }
+                } else {
+                    // No data found
+                }
+            });
+        } else {
+            // No user is signed in.
+        }
+    });                    
+}
+
 $('document').ready(function() {
     
     // Tracker to handle whether or not a user is currently logged in, updates UI accordingly
@@ -180,6 +226,7 @@ $('document').ready(function() {
     
     $("#post-day-form").submit(function(event){
         event.preventDefault();
+        let date;
         let mood = $('input[name="post-day-mood"]:checked').val();
         let hue = $('#post-day-hue').val();
         let notes = $('#post-day-notes').val();
@@ -188,8 +235,14 @@ $('document').ready(function() {
             hue: hue,
             notes, notes
         };
-        let date = getToday();
-        logDay(date, data);
+        let dateAttr = $('#post-day .rectangle-container').attr("date");
+        if (typeof dateAttr !== 'undefined' && dateAttr !== false) {
+            date = getToday();
+            logDay(date, data);
+        } else {
+            date = dateAttr;
+            logDay(date, data);
+        }
         return false;
     });
 
@@ -197,38 +250,6 @@ $('document').ready(function() {
     
     $('#cube-container').on('click', '.cube' , function() {
         let date = $(this).attr('date');
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-
-                // User is signed in.
-                let uid = user.uid;
-
-                // Grabs directory location
-                let location = firebase.database().ref('users/' + uid + '/log/' + date);
-
-                // Takes snapshot
-                location.once('value', function(snapshot) {
-                    if (snapshot.exists()) {
-                        let data = snapshot.val();
-                        let mood = data.mood;
-                        let hue = data.hue;
-                        let notes = data.notes;
-                        let formattedDate = date;
-                        formattedDate = formattedDate.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
-                        $('#post-date').text(formattedDate);
-                        $('input[name="post-day-mood"]').prop('checked', false);
-                        $(`#mood-${mood}`).prop('checked', true);
-                        $('#post-day-hue').val(hue);
-                        $('#post-day-notes').val(notes);
-                        $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`);
-                    } else {
-                        // No data found
-                    }
-                });
-            } else {
-                // No user is signed in.
-            }
-        });
-        console.log(date);
+        loadDayForm(date, false);
     });
 });
