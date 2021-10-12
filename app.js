@@ -3,7 +3,7 @@ function formatDate(date) {
     let mm = String(date.getMonth() + 1). padStart(2, '0'); //January is 0!
     let yyyy = date.getFullYear();
     let formattedDate = yyyy + mm + dd;
-    return date;
+    return formattedDate;
 }
 
 function adjustDate(num) {
