@@ -132,6 +132,7 @@ h1, h2, h3 {
   z-index: 3;
   width: 100%;
   text-align: center;
+  left: 0;
 }
 
 #authenticate {
