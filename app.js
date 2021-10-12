@@ -39,7 +39,7 @@ function logDay(day, data) {
 
 function loadDayCube(date) {
     
-    let cube = $('div.cube');
+    let cube = $('<div class="cube"></div>');
     
     let user = firebase.auth().currentUser;
     firebase.auth().onAuthStateChanged(function(user) {
