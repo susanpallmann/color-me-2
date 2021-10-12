@@ -273,7 +273,7 @@ $('document').ready(function() {
     $('#cube-container').on('click', '.cube' , function() {
         let date = $(this).attr('date');
         loadDayForm(date, false);
-        $('#post-day').show();
+        $('#post-day').fadeIn();
     });
     
     $('#post-day-edit').click(function(event) {
@@ -287,16 +287,16 @@ $('document').ready(function() {
     $('#app').on('click', '#log-day', function() {
         let date = getToday();
         loadDayForm(date, true);
-        $('#post-day').show();
+        $('#post-day').fadeIn();
     });
     
     $('#app').on('click', '#edit-day', function() {
         let date = getToday();
         loadDayForm(date, true);
-        $('#post-day').show();
+        $('#post-day').fadeIn();
     });
     
     $('#app').on('click', '#close-post', function() {
-        $('#post-day').hide();
+        $('#post-day').fadeOut();
     });
 });
