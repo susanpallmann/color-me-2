@@ -409,3 +409,18 @@ h1, h2, h3 {
   justify-content: left;
   column-gap: 20px;
 }
+
+#log-day, #edit-day {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  -webkit-transition: 0.2s;
+  transition: all 0.2s;
+}
+
+#log-day:hover, #edit-day:hover,
+#log-day:focus, #edit-day:focus,
+#log-day:active, #edit-day:active {
+  opacity: 0.8;
+}
