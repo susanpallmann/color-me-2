@@ -1,3 +1,12 @@
+function getToday() {
+    let today = new Date();
+    let dd = String(today.getDate()). padStart(2, '0');
+    let mm = String(today.getMonth() + 1). padStart(2, '0'); //January is 0!
+    let yyyy = today.getFullYear();
+    let date = yyyy + mm + dd;
+    return date;
+}
+
 function logDay(day, data) {
     // First checks authentication to prevent the user from writing to any directory other than
     // the one associated with their user ID.
@@ -7,7 +16,7 @@ function logDay(day, data) {
             // User is signed in.
             let uid = user.uid;
             
-            // Update info at specific path
+            // Update info at path
             var path = firebase.database().ref('users/' + uid + '/ log/' + day);
             path.update(data);
         } else {
@@ -126,11 +135,7 @@ $('document').ready(function() {
             hue: hue,
             notes, notes
         };
-        let today = new Date();
-        let dd = String(today.getDate()). padStart(2, '0');
-        let mm = String(today.getMonth() + 1). padStart(2, '0'); //January is 0!
-        let yyyy = today.getFullYear();
-        let date = yyyy + mm + dd;
+        let date = getToday();
         logDay(date, data);
         return false;
     });
