@@ -213,6 +213,13 @@ $('document').ready(function() {
                         let mood = data.mood;
                         let hue = data.hue;
                         let notes = data.notes;
+                        let formattedDate = date;
+                        formattedDate = formattedDate.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
+                        $('post-date').text()
+                        $('input[name="post-day-mood"]').prop('checked', false);
+                        $(`post-day-mood-${mood}`).prop('checked'), true);
+                        $('#post-day-hue').val(hue);
+                        $('#notes').val(notes);
                     } else {
                         // No data found
                     }
