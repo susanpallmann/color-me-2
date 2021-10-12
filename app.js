@@ -217,9 +217,9 @@ $('document').ready(function() {
                         formattedDate = formattedDate.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
                         $('post-date').text()
                         $('input[name="post-day-mood"]').prop('checked', false);
-                        $(`mood-${mood}`).prop('checked', true);
+                        $(`#mood-${mood}`).prop('checked', true);
                         $('#post-day-hue').val(hue);
-                        $('#notes').html(notes);
+                        $('#post-day-notes').html(notes);
                     } else {
                         // No data found
                     }
