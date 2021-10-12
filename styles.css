@@ -402,3 +402,10 @@ h1, h2, h3 {
 #close-post:hover, #close-post:active, #close-post:focus {
   opacity: 1;
 }
+
+#app-options {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  column-gap: 20px;
+}
