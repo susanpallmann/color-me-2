@@ -159,6 +159,7 @@ h1, h2, h3 {
   height: 16px;
   width: 16px;
   margin: 3px;
+  cursor: pointer;
 }
 
 #post-day-form {
