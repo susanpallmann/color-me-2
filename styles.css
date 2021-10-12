@@ -385,7 +385,7 @@ h1, h2, h3 {
   position: relative;
 }
 
-#date-container
+#date-container {
   display: flex;
   justify-content: center;
   column-gap: 10px;
