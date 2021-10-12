@@ -99,11 +99,12 @@ function loadDayForm(date, editable) {
                     let formattedDate = date;
                     formattedDate = formattedDate.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
                     $('#post-date').text(formattedDate);
+                    $('#post-day').attr("date", date);
                     $('input[name="post-day-mood"]').prop('checked', false);
                     $(`#mood-${mood}`).prop('checked', true);
                     $('#post-day-hue').val(hue);
                     $('#post-day-notes').val(notes);
-                    $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`).attr("date", date);
+                    $('#post-day .rectangle-container').css('background-color', `hsl(${hue}, 70%, 70%)`);
                     if (hue > 30 && hue < 231) {
                         $('.rectangle-container').removeClass('dark');
                         $('.rectangle-container').addClass('light');
@@ -129,6 +130,7 @@ function loadDayForm(date, editable) {
                     let formattedDate = date;
                     formattedDate = formattedDate.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
                     $('#post-date').text(formattedDate);
+                    $('#post-day').attr("date", date);
                 }
             });
         } else {
@@ -262,7 +264,7 @@ $('document').ready(function() {
             hue: hue,
             notes, notes
         };
-        let dateAttr = $('#post-day .rectangle-container').attr("date");
+        let dateAttr = $('#post-day').attr("date");
         if (typeof dateAttr !== 'undefined' && dateAttr !== false) {
             date = getToday();
             logDay(date, data);
