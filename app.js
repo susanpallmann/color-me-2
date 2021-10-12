@@ -37,6 +37,41 @@ function logDay(day, data) {
     });
 }
 
+function loadDayCube(date) {
+    
+    var user = firebase.auth().currentUser;
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            
+            // User is signed in.
+            let uid = user.uid;
+            
+            // Grabs directory location
+            let location = firebase.database().ref('users/' + uid + '/ log/' + date);
+
+            // Takes snapshot
+            location.once('value', function(snapshot) {
+                let data = snapshot.val();
+                let mood = data.mood;
+                let hue = data.hue;
+                let notes = data.notes;
+                console.log(mood);
+            });
+        } else {
+            // No user is signed in.
+        }
+    });
+}
+
+function loadDays() {
+    // Adjustable variable to determine how many days are loaded to the grid
+    let daysLoaded = 90;
+    for (let i = 0; i < daysLoaded; i++) {
+        let date = adjustDate(i);
+        loadDayCube(date);
+    }
+}
+
 $('document').ready(function() {
     
     // Tracker to handle whether or not a user is currently logged in, updates UI accordingly
@@ -149,6 +184,7 @@ $('document').ready(function() {
         };
         let date = getToday();
         logDay(date, data);
+        loadDayCube(date);
         return false;
     });
 });
