@@ -9,7 +9,7 @@ function formatDate(date) {
 function adjustDate(num) {
     var today = new Date();
     today.setDate(today.getDate() - num);
-    let date = formatDate(today)
+    let date = formatDate(today);
     return date;
 }
 
