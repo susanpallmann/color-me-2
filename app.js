@@ -29,7 +29,7 @@ function logDay(day, data) {
             let uid = user.uid;
             
             // Update info at path
-            var path = firebase.database().ref('users/' + uid + '/log/' + day);
+            let path = firebase.database().ref('users/' + uid + '/log/' + day);
             path.update(data);
         } else {
             // No user is signed in.
@@ -53,7 +53,7 @@ function loadDayCube(date) {
 
             // Takes snapshot
             location.once('value', function(snapshot) {
-                if (snapshot) {
+                if (snapshot.exists()) {
                     let data = snapshot.val();
                     let mood = data.mood;
                     mood = mood/5;
@@ -74,6 +74,7 @@ function loadDays() {
     let daysLoaded = 90;
     for (let i = 0; i < daysLoaded; i++) {
         let date = adjustDate(i);
+        console.log(date);
         loadDayCube(date);
     }
 }
