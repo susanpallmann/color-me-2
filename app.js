@@ -135,6 +135,19 @@ function loadDayForm(date, editable) {
                     formattedDate = formattedDate.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
                     $('#post-date').text(formattedDate);
                     $('#post-day').attr("date", date);
+                    $('input[name="post-day-mood"]').prop('checked', false);
+                    $(`#mood-3`).prop('checked', true);
+                    $('#post-day-hue').val(210);
+                    $('#post-day-notes').val('');
+                    $('#post-day .rectangle-container').css('background-color', `hsl(210, 70%, 70%)`).addClass('dark');
+                    let today = getToday();
+                    if (date === today) {
+                        $('#post-day-submit').show();
+                        $('#post-day-edit').hide();
+                    } else {
+                        $('#post-day-submit').hide();
+                        $('#post-day-edit').show();
+                    }
                 }
             });
         } else {
