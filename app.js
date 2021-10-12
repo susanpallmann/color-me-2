@@ -300,7 +300,12 @@ $('document').ready(function() {
 
     $('#cube-container').on('click', '.cube' , function() {
         let date = $(this).attr('date');
-        loadDayForm(date, false);
+        let today = getToday();
+        if (date === today) {
+            loadDayForm(date, true);
+        } else {
+            loadDayForm(date, false);
+        }
         $('#post-day').fadeIn();
     });
     
