@@ -358,11 +358,11 @@ h1, h2, h3 {
 #post-day-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 #post-date {
   font-weight: 700;
   text-align: left;
   font-size: 12;
-  margin-bottom: 24px;
 }
