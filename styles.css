@@ -88,7 +88,6 @@ a:hover, a:active, a:focus {
   width: 100%;
   box-sizing: border-box;
   max-width: 350px;
-  background-color: #fff;
 }
 
 footer {
@@ -153,6 +152,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: #fff;
 }
 
 .cube {
