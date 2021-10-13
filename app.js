@@ -1,3 +1,20 @@
+function updateWrap(hue = "#ffffff") {
+    if (hue === "#ffffff") {
+        $('body').css('background-color', `${hue}`);
+        $('#edit-day').removeClass('dark').addClass('light');
+        $('#log-day').removeClass('dark').addClass('light');
+    } else {
+        $('body').css('background-color', `hsl(${hue}, 70%, 70%)`);
+        if (hue > 30 && hue < 231) {
+            $('#edit-day').removeClass('dark').addClass('light');
+            $('#log-day').removeClass('dark').addClass('light');
+        } else {
+            $('#edit-day').removeClass('light').addClass('dark');
+            $('#log-day').removeClass('light').addClass('dark');
+        }
+    }
+}
+
 function getAverageHue() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
@@ -20,7 +37,6 @@ function getAverageHue() {
                     total ++;
                 });
                 averageHue = averageHue/total;
-                console.log(averageHue);
             });
         }
     });
