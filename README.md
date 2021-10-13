@@ -1,10 +1,11 @@
 # color-me-2
 *Current Version: MVP (1.0)*
 
-**Description**
+**Description:**
+
 A new take on an old project - experimental UX project around a daily mood journal with (hopefully) an emphasis on improving that mood.
 
-**Features**
+**Features:**
 - Authentication
 - Log Day
 - View Day
@@ -13,6 +14,11 @@ A new take on an old project - experimental UX project around a daily mood journ
   - Mood
   - Hue
   - Notes
+
+**Resources:**
+- Google Firebase Realtime Database
+- Google Firebase Authentication
+- Google Material Icons
 
 ## To-Do
 
