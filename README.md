@@ -5,16 +5,6 @@
 
 A new take on an old project - experimental UX project around a daily mood journal with (hopefully) an emphasis on improving that mood.
 
-**Features:**
-- Authentication
-- Log Day
-- View Day
-- Edit Day
-- Day Information:
-  - Mood
-  - Hue
-  - Notes
-
 **Resources:**
 - Google Firebase Realtime Database
 - Google Firebase Authentication
