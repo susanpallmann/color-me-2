@@ -37,6 +37,9 @@ function getAverageHue() {
                     total ++;
                 });
                 averageHue = averageHue/total;
+                if (averageHue) {
+                    updateWrap(averageHue);
+                }
             });
         }
     });
