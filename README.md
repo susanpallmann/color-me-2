@@ -28,5 +28,4 @@ A new take on an old project - experimental UX project around a daily mood journ
 - [X] Make some sort of CTA for entering a new day.
 - [X] Hide (or change) the CTA if today was already filled out.
 - [X] Make form show/hide functionality.
-- [ ] Bug-fixing.
 - [ ] Comment code/document.
