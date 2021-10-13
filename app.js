@@ -1,3 +1,31 @@
+function getAverageHue() {
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+
+            // User is signed in.
+            let uid = user.uid;
+
+            // Grabs directory location
+            let location = firebase.database().ref('users/' + uid + '/log');
+
+            // Takes snapshot
+            location.on('value', function(snapshot) {
+                let averageHue;
+                let total;
+                snapshot.forEach((childSnapshot) => {
+                    let date = childSnapshot.key;
+                    let data = childSnapshot.val();
+                    let hue = data.hue;
+                    averageHue = averageHue + hue;
+                    total ++;
+                });
+                averageHue = averageHue/total;
+                console.log(averageHue);
+            });
+        }
+    });
+}
+
 function formatDate(date) {
     let dd = String(date.getDate()). padStart(2, '0');
     let mm = String(date.getMonth() + 1). padStart(2, '0'); //January is 0!
@@ -171,6 +199,7 @@ $('document').ready(function() {
             var uid = user.uid;
             $('#authenticate').hide();
             $('#app').fadeIn();
+            getAverageHue();
             $('#profile-actions').fadeIn();
             loadDays();
             
