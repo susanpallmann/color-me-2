@@ -15,7 +15,7 @@ function getAverageHue() {
                 snapshot.forEach((childSnapshot) => {
                     let date = childSnapshot.key;
                     let data = childSnapshot.val();
-                    let hue = data.hue;
+                    let hue = parseInt(data.hue);
                     averageHue = averageHue + hue;
                     total ++;
                 });
