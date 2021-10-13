@@ -7,6 +7,7 @@ A new take on an old project - experimental UX project around a daily mood journ
 **Features**
 - Authentication
 - Log Day
+- View Day
 - Edit Day
 - Day Information:
   - Mood
