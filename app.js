@@ -10,8 +10,8 @@ function getAverageHue() {
 
             // Takes snapshot
             location.on('value', function(snapshot) {
-                let averageHue;
-                let total;
+                let averageHue = 0;
+                let total = 0;
                 snapshot.forEach((childSnapshot) => {
                     let date = childSnapshot.key;
                     let data = childSnapshot.val();
