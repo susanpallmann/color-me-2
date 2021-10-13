@@ -415,7 +415,6 @@ h1, h2, h3 {
 }
 
 #log-day, #edit-day {
-  opacity: 1;
   display: flex;
   align-items: center;
   column-gap: 8px;
@@ -427,7 +426,7 @@ h1, h2, h3 {
 #log-day:hover, #edit-day:hover,
 #log-day:focus, #edit-day:focus,
 #log-day:active, #edit-day:active {
-  opacity: 0.8;
+  color: #166dc7;
 }
 
 body {
